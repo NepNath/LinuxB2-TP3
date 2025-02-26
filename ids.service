@@ -1,0 +1,17 @@
+[Unit]
+Description=Intrusion Detection System
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/ids.py --check
+Restart=always
+RestartSec=30s
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+
+
+
+[Install]
+WantedBy=multi-user.target

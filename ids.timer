@@ -1,0 +1,10 @@
+[Unit]
+Description=Exécute IDS toutes les 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=ids.service
+
+[Install]
+WantedBy=timers.target
